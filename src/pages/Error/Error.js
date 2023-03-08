@@ -22,13 +22,13 @@ export const Error = () => {
         <Grid container spacing={2} style={{ textAlign: "center" }}>
           <Grid item xs={12}>
             <Typography variant="h1" style={{ color: "white" }}>
-              {error.status}
+              {error?.status}
             </Typography>
           </Grid>
           <Grid item xs={12}>
             <h2>An unexpected error has occurred.</h2>
             <p>
-              <i>{error.statusText || error.message}</i>
+              <i>{error?.statusText || error?.message}</i>
             </p>
           </Grid>
           <Grid item xs={12}>

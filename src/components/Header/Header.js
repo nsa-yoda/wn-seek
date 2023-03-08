@@ -26,15 +26,19 @@ export const Header = () => {
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
+          {/* Left side */}
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/login">
-              Login
+            <Nav.Link as={Link} to="/pricing">
+              Pricing
             </Nav.Link>
-            <Nav.Link as={Link} to="/" onClick={() => signOut()}>
-              Logout
+            <Nav.Link as={Link} to="/checkout">
+              Checkout
             </Nav.Link>
             <Nav.Link as={Link} to="/profile">
               Profile
+            </Nav.Link>
+            <Nav.Link as={Link} to="/dashboard">
+              Dashboard
             </Nav.Link>
             <Nav.Link as={Link} to="/messages">
               Messages
@@ -52,10 +56,17 @@ export const Header = () => {
               Error
             </Nav.Link>
           </Nav>
+
+          {/* Right side */}
           <Nav>
-            <Nav.Link href="#deets">More Details</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+            <Nav.Link as={Link} to="/login">
+              Login
+            </Nav.Link>
+            <Nav.Link as={Link} to="/signup">
+              Signup
+            </Nav.Link>
+            <Nav.Link as={Link} to="/" onClick={() => signOut()}>
+              Logout
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

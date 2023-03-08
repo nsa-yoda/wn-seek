@@ -2,15 +2,16 @@ import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 import { Error } from "./pages/Error/Error";
-import { Login } from "./pages/Login/Login";
 
 const App = (props) => {
+  console.log(window.innerHeight);
   return (
     <div className="App">
       <Header></Header>
       <div
         style={{
-          minHeight: window.innerHeight - window.innerHeight * 0.25 + "px",
+          minHeight:
+            (window.innerHeight < 800 ? window.innerHeight : 800) + "px",
         }}
       >
         {(props.error && <Error />) || <Outlet />}

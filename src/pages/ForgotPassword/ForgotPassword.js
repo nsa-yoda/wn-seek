@@ -1,4 +1,4 @@
-import "./Login.css";
+import "./ForgotPassword.css";
 import Container from "react-bootstrap/Container";
 import { useSignIn } from "react-auth-kit";
 import { useState } from "react";
@@ -20,7 +20,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-export const Login = ({ history }) => {
+export const ForgotPassword = ({ history }) => {
   const navigate = useNavigate();
   const theme = createTheme();
   const signIn = useSignIn();
@@ -84,7 +84,7 @@ export const Login = ({ history }) => {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+              Forgot Password
             </Typography>
             <Box
               component="form"
@@ -126,7 +126,7 @@ export const Login = ({ history }) => {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link to='/forgot-password' variant="body2">
+                  <Link href="#" variant="body2">
                     Forgot password?
                   </Link>
                 </Grid>

@@ -193,8 +193,7 @@ export const Footer = () => {
           <div className="row mt-5">
             <div className="col-md-6 col-lg-8">
               <p className="copyright">
-                Copyright &copy;
-                <script>document.write(new Date().getFullYear());</script>
+                Copyright &copy; {new Date().getFullYear()}
                 All rights reserved | This template is made with{" "}
                 <i className="ion-ios-heart" aria-hidden="true"></i> by{" "}
                 <a href="https://colorlib.com" target="_blank">
